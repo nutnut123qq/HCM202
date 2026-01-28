@@ -11,6 +11,13 @@ const hcmExams = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Link
+        href="/ai-declaration"
+        className="fixed bottom-6 right-6 z-20 flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700 shadow-lg transition hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-900"
+      >
+        <span className="text-sm">⭐</span>
+        AI
+      </Link>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
