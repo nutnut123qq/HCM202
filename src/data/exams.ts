@@ -2835,3 +2835,1299 @@ export const sp2025FeQuestions: Question[] = [
     ]
   }
 ];
+
+export const su25B5FinalExamQuestions: Question[] = [
+  {
+    "id": "q1",
+    "questionText": "Đâu là chức năng của văn hóa theo tư tưởng Hồ Chí Minh?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Bồi dưỡng những phẩm chất tốt đẹp và phong cách lành mạnh cho con người"
+      },
+      {
+        "label": "B",
+        "content": "Bồi dưỡng những phẩm chất tốt đẹp và phong cách lành mạnh cho xã hội"
+      },
+      {
+        "label": "C",
+        "content": "Bồi dưỡng những phẩm chất tốt đẹp và phong cách lành mạnh cho nhân dân"
+      },
+      {
+        "label": "D",
+        "content": "Bồi dưỡng những phẩm chất tốt đẹp và phong cách lành mạnh cho quần chúng"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q2",
+    "questionText": "Theo Hồ Chí Minh, người cách mạng phải có đạo đức, không có đạo đức thì như thế nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Dù tài giỏi mấy cũng không đi"
+      },
+      {
+        "label": "B",
+        "content": "Dù tài giỏi mấy cũng không đáng dùng"
+      },
+      {
+        "label": "C",
+        "content": "Dù tài giỏi mấy cũng không lãnh đạo được nhân dân"
+      },
+      {
+        "label": "D",
+        "content": "Dù tài giỏi mấy cũng không xứng đáng là người cách mạng"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q3",
+    "questionText": "Đâu là chuẩn mực đạo đức cách mạng trong tư tưởng Hồ Chí Minh?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Trung với nước, hiếu với dân"
+      },
+      {
+        "label": "B",
+        "content": "Trung với nước, hiếu với đồng bào"
+      },
+      {
+        "label": "C",
+        "content": "Trung với nước, hiếu với cách mạng"
+      },
+      {
+        "label": "D",
+        "content": "Trung với nước, hiếu với xã hội"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q4",
+    "questionText": "Hồ Chí Minh ví chủ nghĩa dân tộc như:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Mùa xuân của xã hội"
+      },
+      {
+        "label": "B",
+        "content": "Động lực lớn của đất nước"
+      },
+      {
+        "label": "C",
+        "content": "Nền tảng tư tưởng của Đảng"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q5",
+    "questionText": "Hồ Chí Minh cho rằng thầy giáo, cô giáo trong chế độ ta cần góp phần vào công cuộc nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Công cuộc xây dựng CNXH"
+      },
+      {
+        "label": "B",
+        "content": "Công cuộc kháng chiến chống Mỹ cứu nước"
+      },
+      {
+        "label": "C",
+        "content": "Công cuộc xây dựng xã hội mới"
+      },
+      {
+        "label": "D",
+        "content": "Kháng chiến chống Pháp"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q6",
+    "questionText": "Theo Tư tưởng Hồ Chí Minh, văn hóa có mấy chức năng chủ yếu?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Hai"
+      },
+      {
+        "label": "B",
+        "content": "Ba"
+      },
+      {
+        "label": "C",
+        "content": "Bốn"
+      },
+      {
+        "label": "D",
+        "content": "Năm"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q7",
+    "questionText": "Hồ Chí Minh khẳng định: “Văn hóa phải soi đường cho quốc dân đi\" là nói đến vấn đề gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Văn hóa chính trị là một trong những động lực cho sự phát triển"
+      },
+      {
+        "label": "B",
+        "content": "Văn hóa là bản sắc dân tộc"
+      },
+      {
+        "label": "C",
+        "content": "Văn hóa là niềm tin của quần chúng"
+      },
+      {
+        "label": "D",
+        "content": "Văn hóa là tiêu chí để đánh giá trình độ dân tộc"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q8",
+    "questionText": "Theo quan điểm của Hồ Chí Minh, nội dung xây dựng con người cần quan tâm xây dựng con người toàn diện như thế nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Vừa “hồng\" vừa \"chuyên\""
+      },
+      {
+        "label": "B",
+        "content": "Vừa “chuyên\" vừa \"cần\""
+      },
+      {
+        "label": "C",
+        "content": "Vừa \"cần\" vừa \"kiệm\""
+      },
+      {
+        "label": "D",
+        "content": "Vừa “kiệm\" vừa \"liêm\""
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q9",
+    "questionText": "Theo Hồ Chí Minh, trình độ văn hóa của nhân dân nâng cao sẽ giúp cho chúng ta đẩy mạnh công cuộc gì? Chọn phương án chính xác nhất:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Khôi phục kinh tế"
+      },
+      {
+        "label": "B",
+        "content": "Khôi phục kinh tế, phát triển dân chủ"
+      },
+      {
+        "label": "C",
+        "content": "Phát triển dân chủ"
+      },
+      {
+        "label": "D",
+        "content": "Khôi phục văn hóa"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q10",
+    "questionText": "Theo Hồ Chí Minh, không phải mọi con người đều trở thành động lực, mà phải là những con người như thế nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Được giác ngộ và tổ chức"
+      },
+      {
+        "label": "B",
+        "content": "Có đạo đức"
+      },
+      {
+        "label": "C",
+        "content": "Có năng lực"
+      },
+      {
+        "label": "D",
+        "content": "Có trình độ và hiểu biết"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q11",
+    "questionText": "Hồ Chí Minh yêu cầu: \"phải phát huy hết ... , phải lột cho hết tinh thần dân tộc, để cổ vũ cho đồng bào ta, để giáo dục cho con cháu ta\" Từ còn thiếu trong dấu ... là gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Cốt cách dân tộc"
+      },
+      {
+        "label": "B",
+        "content": "Hồn cốt dân tộc"
+      },
+      {
+        "label": "C",
+        "content": "Văn hóa dân tộc"
+      },
+      {
+        "label": "D",
+        "content": "Truyền thống dân tộc"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q12",
+    "questionText": "Theo Hồ Chí Minh, chí công vô tư là nêu cao chủ nghĩa tập thể, trừ bỏ vấn đề gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Chủ nghĩa cá nhân"
+      },
+      {
+        "label": "B",
+        "content": "Chủ nghĩa tư nhân"
+      },
+      {
+        "label": "C",
+        "content": "Chủ nghĩa tư bản"
+      },
+      {
+        "label": "D",
+        "content": "Chủ nghĩa vị kỳ"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q13",
+    "questionText": "Cách diễn đạt nào dưới đây là của Hồ Chí Minh?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Lý luận mà không liên hệ với thực tiễn là lý luận mù quáng"
+      },
+      {
+        "label": "B",
+        "content": "Lý luận mà không liên hệ với thực tiễn là lý luận suông"
+      },
+      {
+        "label": "C",
+        "content": "Lý luận mà không liên hệ với thực tiễn là lý luận giáo điều"
+      },
+      {
+        "label": "D",
+        "content": "Lý luận mà không liên hệ với thực tiễn là lý luận trống rỗng"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q14",
+    "questionText": "Nguyên tắc cơ bản trong nghiên cứu tư tưởng Hồ Chí Minh là gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Thống nhất giữa lí luận và thực tiễn"
+      },
+      {
+        "label": "B",
+        "content": "Thống nhất giữa tính đảng và tính thực tiễn"
+      },
+      {
+        "label": "C",
+        "content": "Thống nhất giữa tính khoa học và thực tiễn"
+      },
+      {
+        "label": "D",
+        "content": "Thống nhất giữa tính khoa học và tính đảng"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q15",
+    "questionText": "Khái niệm tư tưởng Hồ Chí Minh mà Đại hội IX (2001) nêu lên KHÔNG bao gồm nội dung nào sau đây?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Bản chất cách mạng và khoa học của tư tưởng Hồ Chí Minh"
+      },
+      {
+        "label": "B",
+        "content": "Nguồn gốc tư tưởng, lý luận của tư tưởng Hồ Chí Minh"
+      },
+      {
+        "label": "C",
+        "content": "Nội dung tư tưởng Hồ Chí Minh"
+      },
+      {
+        "label": "D",
+        "content": "Kết cấu tư tưởng Hồ Chí Minh"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": "q16",
+    "questionText": "Trong nghiên cứu tư tưởng Hồ Chí Minh, cần quán triệt quan điểm nào dưới đây?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Quan điểm bộ phận"
+      },
+      {
+        "label": "B",
+        "content": "Quan điểm chỉnh thể"
+      },
+      {
+        "label": "C",
+        "content": "Quan điểm toàn diện"
+      },
+      {
+        "label": "D",
+        "content": "Quan điểm toàn cục"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q17",
+    "questionText": "Nội dung nào không đúng về giá trị lý luận và thực tiễn của Tư tưởng Hồ Chí Minh về vấn đề dân tộc và cách mạng giải phóng dân tộc?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Làm phong phú học thuyết Mac-Lênin về cách mạng thuộc địa"
+      },
+      {
+        "label": "B",
+        "content": "Soi đường thắng lợi cho cách mạng giải phóng dân tộc ở Việt Nam"
+      },
+      {
+        "label": "C",
+        "content": "Nền tảng tư tưởng và kim chỉ nam cho mọi hành động của cách mạng Việt Nam"
+      },
+      {
+        "label": "D",
+        "content": "Là tiền đề cho thắng lợi của Cách mạng tháng 8"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q18",
+    "questionText": "Theo Hồ Chí Minh, một trong những đặc điểm của Nhà nước pháp quyền là gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Nguyên tắc cơ bản của Nhà nước là hiệp thương dân chủ"
+      },
+      {
+        "label": "B",
+        "content": "Nhà nước lãnh đạo nhân dân thực hiện các nhiệm vụ cách mạng"
+      },
+      {
+        "label": "C",
+        "content": "Sự lãnh đạo của Đảng đối với Nhà nước"
+      },
+      {
+        "label": "D",
+        "content": "Nhà nước hợp hiến, hợp pháp"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q19",
+    "questionText": "Hồ Chí Minh nhắc cán bộ nhà nước phải biết làm điều gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Làm lợi cho dân"
+      },
+      {
+        "label": "B",
+        "content": "Lao động vì dân"
+      },
+      {
+        "label": "C",
+        "content": "Phấn đấu vì dân"
+      },
+      {
+        "label": "D",
+        "content": "Làm quan cách mạng"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q20",
+    "questionText": "Theo tư tưởng Hồ Chí Minh, Đảng Cộng sản Việt Nam vừa là người lãnh đạo, vừa là người đầy tớ trung thành của nhân dân, Đảng phải chăm lo mối quan hệ giữa Đảng với dân là nhằm mục đích gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Xác định vị thế cầm quyền của Đảng"
+      },
+      {
+        "label": "B",
+        "content": "Xác định phương thức cầm quyền của Đảng"
+      },
+      {
+        "label": "C",
+        "content": "Xác định năng lực cầm quyền của Đảng"
+      },
+      {
+        "label": "D",
+        "content": "Xác định tính chất cầm quyền của Đảng"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q21",
+    "questionText": "Hồ Chí Minh nhấn mạnh xây dựng nhà nước trong sạch vững mạnh cần phải:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Kết hợp giáo dục pháp luật và đạo đức, hình thành pháp quyền nhân nghĩa"
+      },
+      {
+        "label": "B",
+        "content": "Kết hợp giáo dục pháp luật và nhân cách, hình thành pháp quyền nhân nghĩa"
+      },
+      {
+        "label": "C",
+        "content": "Kết hợp giáo dục pháp luật và nghề nghiệp, hình thành pháp quyền nhân nghĩa"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q22",
+    "questionText": "Hồ Chí Minh nhắc cán bộ nhà nước phải như thế nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Có mối liên hệ mật thiết với đại diện của nhân dân"
+      },
+      {
+        "label": "B",
+        "content": "Có mối liên hệ mật thiết với giai cấp mình"
+      },
+      {
+        "label": "C",
+        "content": "Có mối liên hệ mật thiết với chính quyền"
+      },
+      {
+        "label": "D",
+        "content": "Có mối liên hệ mật thiết với nhân dân"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": "q23",
+    "questionText": "Theo Hồ Chí Minh, Nhà nước Việt Nam được xây dựng phải là nhà nước như thế nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Nhà nước hợp pháp, hợp hiến"
+      },
+      {
+        "label": "B",
+        "content": "Nhà nước quốc gia dân tộc"
+      },
+      {
+        "label": "C",
+        "content": "Nhà nước tự lập, tự tôn"
+      },
+      {
+        "label": "D",
+        "content": "Nhà nước bảo hộ cho phép"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q24",
+    "questionText": "Theo Hồ Chí Minh, Đảng cộng sản Việt Nam là Đảng:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Của xã hội"
+      },
+      {
+        "label": "B",
+        "content": "Của nhân dân lao động và của dân tộc"
+      },
+      {
+        "label": "C",
+        "content": "Của dân, do dân và vì dân"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q25",
+    "questionText": "Hồ Chí Minh cho rằng, nhà nước của dân, do dân và vì dân phải như thế nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Có hiệu lực pháp lý mạnh mẽ"
+      },
+      {
+        "label": "B",
+        "content": "Có hiệu lực pháp lý toàn diện"
+      },
+      {
+        "label": "C",
+        "content": "Có hiệu lực pháp lý chân chính"
+      },
+      {
+        "label": "D",
+        "content": "Có hiệu lực pháp lý hiệu quả"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q26",
+    "questionText": "Báo Le Paria (Người Cùng khổ) do Nguyễn Ái Quốc đồng sáng lập, ra số đầu tiên khi nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "30/12/1920"
+      },
+      {
+        "label": "B",
+        "content": "1/4/1921"
+      },
+      {
+        "label": "C",
+        "content": "1/4/1922"
+      },
+      {
+        "label": "D",
+        "content": "1/4/1923"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q27",
+    "questionText": "Nguyễn Sinh Cung theo cha lần đầu tiên đến Huế vào thời gian nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Từ năm 1895 đến năm 1901"
+      },
+      {
+        "label": "B",
+        "content": "Từ năm 1896 đến năm 1906"
+      },
+      {
+        "label": "C",
+        "content": "Từ năm 1896 đến năm 1901"
+      },
+      {
+        "label": "D",
+        "content": "Từ năm 1895 đến năm 1905"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q28",
+    "questionText": "Trong giai đoạn 1923 - 1924, Quảng Châu Trung Quốc được mệnh danh là:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Moskva của Phương Đông"
+      },
+      {
+        "label": "B",
+        "content": "Trung tâm của cách mạng vô sản"
+      },
+      {
+        "label": "C",
+        "content": "Thủ phủ Cộng sản"
+      },
+      {
+        "label": "D",
+        "content": "Căn cứ quốc tế vô sản"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q29",
+    "questionText": "Hồ Chí Minh mất bao nhiêu năm bôn ba nước ngoài để tìm đường cứu nước?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "10 năm"
+      },
+      {
+        "label": "B",
+        "content": "25 năm"
+      },
+      {
+        "label": "C",
+        "content": "30 năm"
+      },
+      {
+        "label": "D",
+        "content": "35 năm"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q30",
+    "questionText": "Tiền đề tư tưởng, lí luận dẫn đến sự hình thành tư tưởng Hồ Chí Minh là gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Giá trị truyền thống văn hiến Việt Nam"
+      },
+      {
+        "label": "B",
+        "content": "Giá trị truyền thống văn hóa Việt Nam"
+      },
+      {
+        "label": "C",
+        "content": "Giá trị tư tưởng Việt Nam"
+      },
+      {
+        "label": "D",
+        "content": "Giá trị truyền thống lễ tiết của Việt Nam"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q31",
+    "questionText": "Nguồn gốc nào sau đây quyết định nhất tư tưởng Hồ Chí Minh?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Chủ nghĩa Tam dân của Tôn Trung Sơn"
+      },
+      {
+        "label": "B",
+        "content": "Học thuyết Nho giáo của Khổng Tử"
+      },
+      {
+        "label": "C",
+        "content": "Chủ nghĩa Mac Lenin"
+      },
+      {
+        "label": "D",
+        "content": "Tư tưởng của Giêsu"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q32",
+    "questionText": "Nguyễn Ái Quốc đến Liên Xô lần đầu tiên học tại trường nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Đại học Liên Xô"
+      },
+      {
+        "label": "B",
+        "content": "Đại học Phương Đông"
+      },
+      {
+        "label": "C",
+        "content": "Trường quốc tế Lênin"
+      },
+      {
+        "label": "D",
+        "content": "Viện nghiên cứu các vấn đề dân tộc và thuộc địa"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q33",
+    "questionText": "Hồ Chí Minh tiếp thu tư tưởng về đạo đức của Nho giáo trong việc xây dựng, đổi mới, phát triển tư tưởng đạo đức trong công tác gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Xây dựng con người mới"
+      },
+      {
+        "label": "B",
+        "content": "Xây dựng Đảng về đạo đức"
+      },
+      {
+        "label": "C",
+        "content": "Xây dựng văn hóa mới"
+      },
+      {
+        "label": "D",
+        "content": "Xây dựng xã hội mới"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q34",
+    "questionText": "Ngoại ngữ nào sau đây được Hồ Chí Minh sử dụng trong thời gian học tập ở trường Quốc học Huế?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Tiếng Anh"
+      },
+      {
+        "label": "B",
+        "content": "Tiếng Pháp"
+      },
+      {
+        "label": "C",
+        "content": "Tiếng Trung"
+      },
+      {
+        "label": "D",
+        "content": "Tiếng Nga"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q35",
+    "questionText": "Trong tư tưởng Hồ Chí Minh, đại đoàn kết dân tộc là gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Đoàn kết công-nông"
+      },
+      {
+        "label": "B",
+        "content": "Đoàn kết công-nông-lao động trí óc"
+      },
+      {
+        "label": "C",
+        "content": "Đoàn kết công-nông và các tầng lớp xã hội khác"
+      },
+      {
+        "label": "D",
+        "content": "Đại đoàn kết toàn dân"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": "q36",
+    "questionText": "Đại đoàn kết dân tộc được xác định là nhiệm vụ nào trong những nhiệm vụ dưới đây của Đảng và của toàn dân tộc ta?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Cơ bản của Đảng và của dân tộc"
+      },
+      {
+        "label": "B",
+        "content": "Hàng đầu của Đảng và của dân tộc"
+      },
+      {
+        "label": "C",
+        "content": "Quan trọng của Đảng và của dân tộc ta"
+      },
+      {
+        "label": "D",
+        "content": "Thiết yếu"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q37",
+    "questionText": "Chọn câu trả lời đúng nhất với tư tưởng Hồ Chí Minh về vai trò của đại đoàn kết dân tộc?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Đại đoàn kết dân tộc là vấn đề sách lược"
+      },
+      {
+        "label": "B",
+        "content": "Đại đoàn kết dân tộc là vấn đề chiến lược"
+      },
+      {
+        "label": "C",
+        "content": "Đại đoàn kết dân tộc là thủ đoạn chính trị"
+      },
+      {
+        "label": "D",
+        "content": "Đại đoàn kết dân tộc là phương pháp chính trị"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q38",
+    "questionText": "Hồ Chí Minh cho rằng đoàn kết toàn dân để làm gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Phụng sự nhân dân"
+      },
+      {
+        "label": "B",
+        "content": "Phụng sự cách mạng"
+      },
+      {
+        "label": "C",
+        "content": "Phụng sự tổ quốc"
+      },
+      {
+        "label": "D",
+        "content": "Phụng sự xã hội"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q39",
+    "questionText": "Trong tư tưởng Hồ Chí Minh, lực lượng nào là chủ thể của khối đại đoàn kết dân tộc?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Công nhân"
+      },
+      {
+        "label": "B",
+        "content": "Toàn thể nhân dân"
+      },
+      {
+        "label": "C",
+        "content": "Nông dân"
+      },
+      {
+        "label": "D",
+        "content": "Không xác định lực lượng chủ thể"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q40",
+    "questionText": "Theo Hồ Chí Minh, xây dựng khối đại đoàn kết toàn dân phải đứng vững trên lập trường nào?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Lập trường giai cấp công nhân, giải quyết hài hòa mối quan hệ giai cấp - dân tộc"
+      },
+      {
+        "label": "B",
+        "content": "Lập trường giai cấp tư sản, ưu tiên đấu tranh giai cấp"
+      },
+      {
+        "label": "C",
+        "content": "Lập trường giai cấp nông dân, ưu tiên đấu tranh ruộng đất"
+      },
+      {
+        "label": "D",
+        "content": "Lập trường trí thức, ưu tiên phát triển khoa học công nghệ"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q41",
+    "questionText": "Từ nào còn thiếu trong câu nói sau của Hồ Chí Minh? “Ai có tài, có đức, có sức, có lòng phụng sự Tổ quốc và phục vụ nhân dân thì ta ( ... ) với họ\"",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Hợp tác"
+      },
+      {
+        "label": "B",
+        "content": "Đoàn kết"
+      },
+      {
+        "label": "C",
+        "content": "Bắt tay"
+      },
+      {
+        "label": "D",
+        "content": "Chia sẻ"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q42",
+    "questionText": "Luận điểm \"Công cuộc giải phóng anh em chỉ có thể thực hiện bằng sự nỗ lực của bản thân anh em\" là của:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "C. Mác"
+      },
+      {
+        "label": "B",
+        "content": "Ph. Ăngghen"
+      },
+      {
+        "label": "C",
+        "content": "V.I.Lênin"
+      },
+      {
+        "label": "D",
+        "content": "Hồ Chí Minh"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": "q43",
+    "questionText": "Theo quan điểm Hồ Chí Minh, đại đoàn kết dân tộc phải luôn được nhận thức là vấn đề sống còn và quyết định đến điều gì trong cách mạng?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Lực lượng của cách mạng"
+      },
+      {
+        "label": "B",
+        "content": "Đích đến của cách mạng"
+      },
+      {
+        "label": "C",
+        "content": "Thành bại của cách mạng"
+      },
+      {
+        "label": "D",
+        "content": "Triển vọng của cách mạng"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q44",
+    "questionText": "Trong tư tưởng Hồ Chí Minh, nền tảng của khối đại đoàn kết dân tộc là:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Liên minh công-nông"
+      },
+      {
+        "label": "B",
+        "content": "Liên minh công-nông, lao động trí óc"
+      },
+      {
+        "label": "C",
+        "content": "Liên minh công-nông và các tầng lớp lao động khác"
+      },
+      {
+        "label": "D",
+        "content": "Liên minh công-nông và các lực lượng yêu nước khác"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q45",
+    "questionText": "Đề cập đến vấn đề dân tộc thuộc địa, khác với Mác và Lênin, Hồ Chí Minh bàn nhiều về cuộc đấu tranh nào:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Chống chủ nghĩa phát xít, giải phóng giai cấp"
+      },
+      {
+        "label": "B",
+        "content": "Chống địa chủ phong kiến, giải phóng cho nông dân"
+      },
+      {
+        "label": "C",
+        "content": "Chống chủ nghĩa thực dân, đấu tranh giải phóng dân tộc ở thuộc địa"
+      },
+      {
+        "label": "D",
+        "content": "Chống chủ nghĩa tư bản, giải phóng cho giai cấp"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q46",
+    "questionText": "Đâu là câu trả lời chính xác nhất trong tư tưởng Hồ Chí Minh về vấn đề dân tộc?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Vấn đề dân tộc và vấn đề giai cấp là quan hệ chính trị"
+      },
+      {
+        "label": "B",
+        "content": "Vấn đề dân tộc và vấn đề giai cấp là quan hệ kinh tế"
+      },
+      {
+        "label": "C",
+        "content": "Vấn đề dân tộc và vấn đề giai cấp là quan hệ thể hiện trong mọi mặt của xã hội"
+      },
+      {
+        "label": "D",
+        "content": "Vấn đề dân tộc và vấn đề giai cấp là quan hệ văn hóa"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q47",
+    "questionText": "Theo Hồ Chí Minh, mâu thuẫn chủ yếu ở thuộc địa, không thể điều hòa được là gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Mâu thuẫn giữa giai cấp công nhân với chủ nghĩa thực dân"
+      },
+      {
+        "label": "B",
+        "content": "Mâu thuẫn giữa dân tộc thuộc địa với thực dân, đế quốc"
+      },
+      {
+        "label": "C",
+        "content": "Mâu thuẫn giữa giai cấp nông dân với giai cấp địa chủ bản xứ"
+      },
+      {
+        "label": "D",
+        "content": "Tất cả các phương án trên"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q48",
+    "questionText": "Đâu là sự sáng tạo của Hồ Chí Minh về Chủ nghĩa xã hội ở Việt Nam?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Sáng tạo trong cách thức đi lên xây dựng chủ nghĩa xã hội"
+      },
+      {
+        "label": "B",
+        "content": "Phương pháp bạo lực cách mạng"
+      },
+      {
+        "label": "C",
+        "content": "Lựa chọn con đường đi lên xây dựng chủ nghĩa xã hội"
+      },
+      {
+        "label": "D",
+        "content": "Phân tích đúng tình hình nước ta"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q49",
+    "questionText": "Theo Hồ Chí Minh, mục tiêu kinh tế của thời kỳ quá độ lên CNXH là:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Công, lâm nghiệp hiện đại, khoa học - kỹ thuật tiên tiến, bóc lột được bỏ dần, vật chất được cải thiện"
+      },
+      {
+        "label": "B",
+        "content": "Công, ngư nghiệp hiện đại, khoa học - kỹ thuật tiên tiến, bóc lột được bỏ dần, vật chất được cải thiện"
+      },
+      {
+        "label": "C",
+        "content": "Công, nông nghiệp hiện đại, khoa học - kỹ thuật tiên tiến, bóc lột được bỏ dần, vật chất được cải thiện"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q50",
+    "questionText": "Hồ Chí Minh cho rằng giải phóng dân tộc phải gắn liền với:",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Độc lập, tự do và hạnh phúc"
+      },
+      {
+        "label": "B",
+        "content": "Dân quyền và tự do"
+      },
+      {
+        "label": "C",
+        "content": "Nhân sinh và hạnh phúc"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q51",
+    "questionText": "lượng cách mạng",
+    "answers": [
+      {
+        "label": "D",
+        "content": "Đánh đổ ách thống trị của chủ nghĩa thực dân, giành độc lập dân tộc và thiết lập chính quyền của công nông"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q52",
+    "questionText": "Con đường cứu nước của Hồ Chí Minh là gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Độc lập dân tộc gắn liền với chủ nghĩa xã hội"
+      },
+      {
+        "label": "B",
+        "content": "Giải phóng dân tộc gắn liền với chủ nghĩa xã hội"
+      },
+      {
+        "label": "C",
+        "content": "Giải phóng dân tộc gắn với chủ nghĩa dân tộc"
+      },
+      {
+        "label": "D",
+        "content": "Độc lập dân tộc gắn liền với chế độ dân chủ"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q53",
+    "questionText": "Theo Hồ Chí Minh, tính chất và nhiệm vụ hàng đầu của cách mạng ở thuộc địa là gì?",
+    "answers": [
+      {
+        "label": "A",
+        "content": "Giải phóng dân tộc"
+      },
+      {
+        "label": "B",
+        "content": "Giải phóng thế giới"
+      },
+      {
+        "label": "C",
+        "content": "Giải phóng nhân loại"
+      },
+      {
+        "label": "D",
+        "content": "Giải phóng giai cấp"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  }
+];

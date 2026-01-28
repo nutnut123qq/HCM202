@@ -2,26 +2,10 @@
 
 import Link from "next/link";
 
-const subjects = [
-  {
-    id: "HCM202",
-    name: "HCM202",
-    exams: [
-      { id: "fa25-fe-half1", name: "FA25 - FE - Half1" },
-      { id: "sp2025-fe", name: "SP 2025" },
-    ],
-  },
-  {
-    id: "MLN131",
-    name: "MLN131",
-    exams: [
-      { id: "fa25-re", name: "FA25 RE" },
-      { id: "su25-re", name: "SU25 RE" },
-      { id: "su25-fe", name: "SU25 FE" },
-      { id: "su25sbtk", name: "SU25SBTK" },
-      { id: "sp25-fe", name: "SP25 FE" },
-    ],
-  },
+const hcmExams = [
+  { id: "de-1", name: "Đề 1" },
+  { id: "de-2", name: "Đề 2" },
+  { id: "de-3", name: "Đề 3" },
 ];
 
 export default function HomePage() {
@@ -30,10 +14,10 @@ export default function HomePage() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Hệ thống quản lý đề thi
+            Hệ thống quản lý đề thi HCM
           </h1>
           <p className="text-lg text-gray-600">
-            Chọn môn học để xem danh sách đề thi
+            Chọn đề thi để bắt đầu học tập
           </p>
         </div>
 
@@ -88,17 +72,18 @@ export default function HomePage() {
           </Link>
         </div>
 
+        {/* HCM Exams */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {subjects.map((subject) => (
+          {hcmExams.map((exam) => (
             <Link
-              key={subject.id}
-              href={`/subjects/${subject.id}`}
+              key={exam.id}
+              href={`/subjects/HCM202/${exam.id}/study`}
               className="group"
             >
               <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-6 border-2 border-transparent hover:border-primary">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-primary transition-colors">
-                    {subject.name}
+                    {exam.name}
                   </h2>
                   <svg
                     className="w-6 h-6 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all"
@@ -114,24 +99,9 @@ export default function HomePage() {
                     />
                   </svg>
                 </div>
-                <p className="text-sm text-gray-500 mb-2">
-                  {subject.exams.length} đề thi
+                <p className="text-sm text-gray-500">
+                  Đề thi HCM202
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {subject.exams.slice(0, 2).map((exam) => (
-                    <span
-                      key={exam.id}
-                      className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
-                    >
-                      {exam.name}
-                    </span>
-                  ))}
-                  {subject.exams.length > 2 && (
-                    <span className="text-xs text-gray-500">
-                      +{subject.exams.length - 2} đề khác
-                    </span>
-                  )}
-                </div>
               </div>
             </Link>
           ))}

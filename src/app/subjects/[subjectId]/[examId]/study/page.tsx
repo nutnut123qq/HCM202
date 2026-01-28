@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { fa25FeHalf1Questions, sp2025FeQuestions } from "@/data/exams";
+import { fa25FeHalf1Questions, sp2025FeQuestions, su25B5FinalExamQuestions } from "@/data/exams";
 import { fixSpelling } from "@/lib/parseExam";
 import type { Question } from "@/lib/parseExam";
 
@@ -21,9 +21,9 @@ const applySpellingFixes = (questions: Question[]): Question[] => {
 
 // Map exam IDs to question sets (with spelling fixes applied)
 const examQuestionsMap: Record<string, Question[]> = {
-  "fa25-fe-half1": applySpellingFixes(fa25FeHalf1Questions),
-  "sp2025-fe": applySpellingFixes(sp2025FeQuestions),
-  // Add more exams here as needed
+  "de-1": applySpellingFixes(fa25FeHalf1Questions),
+  "de-2": applySpellingFixes(sp2025FeQuestions),
+  "de-3": applySpellingFixes(su25B5FinalExamQuestions),
 };
 
 export default function StudyPage() {
@@ -34,7 +34,7 @@ export default function StudyPage() {
   const questions = examQuestionsMap[examId] || [];
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string[]>>({});
-  const [clickToRevealMode, setClickToRevealMode] = useState(false);
+  const [showAnswers, setShowAnswers] = useState(true);
   const [revealedAnswers, setRevealedAnswers] = useState<Record<string, string[]>>({});
 
   if (questions.length === 0) {
@@ -45,10 +45,10 @@ export default function StudyPage() {
             Không tìm thấy đề thi
           </h1>
           <Link
-            href={`/subjects/${subjectId}`}
+            href="/"
             className="text-primary hover:underline"
           >
-            Quay lại danh sách đề thi
+            Quay lại
           </Link>
         </div>
       </div>
@@ -62,17 +62,8 @@ export default function StudyPage() {
 
   const handleAnswerClick = (label: string) => {
     const questionId = currentQuestion.id;
-    if (clickToRevealMode) {
-      if (!currentRevealed.includes(label)) {
-        const isWrong = !correctAnswers.includes(label);
-        if (isWrong) {
-          const allRevealed = Array.from(new Set([...currentRevealed, label, ...correctAnswers]));
-          setRevealedAnswers((prev) => ({ ...prev, [questionId]: allRevealed }));
-        } else {
-          setRevealedAnswers((prev) => ({ ...prev, [questionId]: [...currentRevealed, label] }));
-        }
-      }
-    } else {
+    if (showAnswers) {
+      // When answers are shown, allow selecting answers
       if (currentSelected.includes(label)) {
         setSelectedAnswers((prev) => ({
           ...prev,
@@ -83,6 +74,17 @@ export default function StudyPage() {
           ...prev,
           [questionId]: [...currentSelected, label],
         }));
+      }
+    } else {
+      // When answers are hidden, click to reveal
+      if (!currentRevealed.includes(label)) {
+        const isWrong = !correctAnswers.includes(label);
+        if (isWrong) {
+          const allRevealed = Array.from(new Set([...currentRevealed, label, ...correctAnswers]));
+          setRevealedAnswers((prev) => ({ ...prev, [questionId]: allRevealed }));
+        } else {
+          setRevealedAnswers((prev) => ({ ...prev, [questionId]: [...currentRevealed, label] }));
+        }
       }
     }
   };
@@ -101,7 +103,7 @@ export default function StudyPage() {
         {/* Header */}
         <div className="mb-6">
           <Link
-            href={`/subjects/${subjectId}`}
+            href="/"
             className="inline-flex items-center text-gray-600 hover:text-primary mb-4 transition-colors"
           >
             <svg
@@ -117,7 +119,7 @@ export default function StudyPage() {
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-            Quay lại danh sách đề thi
+            Quay lại
           </Link>
           
           <div className="bg-white rounded-lg shadow-md p-4">
@@ -128,15 +130,15 @@ export default function StudyPage() {
               <div className="flex items-center gap-3">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <span className="text-sm text-gray-700 font-medium">
-                    Click để hiển thị đáp án đúng
+                    Hiển thị đáp án đúng
                   </span>
                   <div className="relative">
                     <input
                       type="checkbox"
-                      checked={clickToRevealMode}
+                      checked={showAnswers}
                       onChange={(e) => {
-                        setClickToRevealMode(e.target.checked);
-                        // Reset revealed answers when switching modes
+                        setShowAnswers(e.target.checked);
+                        // Reset revealed answers when hiding answers
                         if (!e.target.checked) {
                           setRevealedAnswers({});
                         }
@@ -146,13 +148,13 @@ export default function StudyPage() {
                     <div
                       className={`
                         w-14 h-7 rounded-full transition-colors duration-200 ease-in-out
-                        ${clickToRevealMode ? "bg-blue-500" : "bg-gray-300"}
+                        ${showAnswers ? "bg-blue-500" : "bg-gray-300"}
                       `}
                     >
                       <div
                         className={`
                           w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out
-                          ${clickToRevealMode ? "translate-x-7" : "translate-x-1"}
+                          ${showAnswers ? "translate-x-7" : "translate-x-1"}
                           mt-0.5
                         `}
                       />
@@ -178,11 +180,11 @@ export default function StudyPage() {
               const isCorrect = correctAnswers.includes(answer.label);
               const isSelected = currentSelected.includes(answer.label);
               const isRevealed = currentRevealed.includes(answer.label);
-              const showCorrectStatus = clickToRevealMode ? (isRevealed && isCorrect) : isCorrect;
-              const showWrongStatus = clickToRevealMode
-                ? (isRevealed && !isCorrect)
-                : (isSelected && !isCorrect);
-              const showSelectedStatus = clickToRevealMode ? false : isSelected;
+              const showCorrectStatus = showAnswers ? isCorrect : (isRevealed && isCorrect);
+              const showWrongStatus = showAnswers
+                ? (isSelected && !isCorrect)
+                : (isRevealed && !isCorrect);
+              const showSelectedStatus = showAnswers ? isSelected : false;
 
               return (
                 <div

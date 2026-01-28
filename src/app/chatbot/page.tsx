@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { ChatMessage, BlackboxChatRequest, BlackboxChatResponse } from "@/lib/types";
 import {
   searchTextbook,
@@ -313,11 +314,34 @@ Hãy trả lời câu hỏi của người dùng dựa trên SOURCES trên. Nế
 
   if (indexStatus === "building" || indexStatus === "not_started") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Đang lập chỉ mục giáo trình...</p>
-          <p className="text-sm text-gray-500 mt-2">Vui lòng đợi trong giây lát</p>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-8 max-w-4xl">
+          <Link
+            href="/"
+            className="inline-flex items-center text-gray-600 hover:text-primary mb-4 transition-colors"
+          >
+            <svg
+              className="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            Quay lại
+          </Link>
+          <div className="flex items-center justify-center min-h-[400px]">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+              <p className="text-gray-600">Đang lập chỉ mục giáo trình...</p>
+              <p className="text-sm text-gray-500 mt-2">Vui lòng đợi trong giây lát</p>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -327,13 +351,34 @@ Hãy trả lời câu hỏi của người dùng dựa trên SOURCES trên. Nế
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Header */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Chatbot AI - Giáo trình Tư tưởng Hồ Chí Minh
-          </h1>
-          <p className="text-gray-600">
-            Đặt câu hỏi về nội dung trong giáo trình Tư tưởng Hồ Chí Minh
-          </p>
+        <div className="mb-6">
+          <Link
+            href="/"
+            className="inline-flex items-center text-gray-600 hover:text-primary mb-4 transition-colors"
+          >
+            <svg
+              className="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            Quay lại
+          </Link>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              Chatbot AI - Giáo trình Tư tưởng Hồ Chí Minh
+            </h1>
+            <p className="text-gray-600">
+              Đặt câu hỏi về nội dung trong giáo trình Tư tưởng Hồ Chí Minh
+            </p>
+          </div>
         </div>
 
         {/* Error Message */}
@@ -471,22 +516,13 @@ Hãy trả lời câu hỏi của người dùng dựa trên SOURCES trên. Nế
               className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
               disabled={isLoading || !isIndexReady()}
             />
-            <div className="flex flex-col gap-2">
-              <button
-                onClick={handleSend}
-                disabled={isLoading || !input.trim() || !isIndexReady()}
-                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
-              >
-                {isLoading ? "Đang gửi..." : "Gửi"}
-              </button>
-              <button
-                onClick={handleClearChat}
-                disabled={messages.length === 0}
-                className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
-              >
-                Xóa
-              </button>
-            </div>
+            <button
+              onClick={handleSend}
+              disabled={isLoading || !input.trim() || !isIndexReady()}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+            >
+              {isLoading ? "Đang gửi..." : "Gửi"}
+            </button>
           </div>
           <p className="text-xs text-gray-500 mt-2">
             Nhấn Enter để gửi, Shift+Enter để xuống dòng
