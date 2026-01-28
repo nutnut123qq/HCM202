@@ -10,7 +10,7 @@ import {
 } from "@/lib/textbook/hcmRag";
 
 const BLACKBOX_API_URL = "https://api.blackbox.ai/chat/completions";
-const DEFAULT_MODEL = "blackboxai/openai/gpt-4";
+const DEFAULT_MODEL = "blackboxai/openai/gpt-5.1";
 const SCORE_THRESHOLD = 0.8; // Minimum score to consider sources relevant
 const MAX_HISTORY_TURNS = 6; // Last N turns to send to LLM
 
@@ -90,6 +90,7 @@ QUY TẮC NGHIÊM NGẶT:
 4. Nếu thông tin trong SOURCES hoàn toàn không liên quan đến câu hỏi, hãy nói rõ: "Theo nội dung giáo trình được cung cấp, tôi không tìm thấy thông tin liên quan đến câu hỏi này."
 5. KHÔNG được bịa đặt hoặc suy đoán thông tin ngoài SOURCES
 6. Trả lời bằng tiếng Việt, rõ ràng, có cấu trúc (ý chính -> giải thích -> trích dẫn)
+7. Khi sử dụng markdown **text** để làm nổi bật, hãy đảm bảo đóng đúng cặp dấu ** và hoàn thành toàn bộ câu trả lời, không bị cắt giữa chừng
 
 SOURCES:
 ${sourcesBlock}
@@ -173,7 +174,7 @@ Hãy trả lời câu hỏi của người dùng dựa trên SOURCES trên. Nế
           { role: "user", content: userQuestion },
         ],
         temperature: 0.2,
-        max_tokens: 1600,
+        max_tokens: 2500,
         stream: false,
       };
 
@@ -251,6 +252,65 @@ Hãy trả lời câu hỏi của người dùng dựa trên SOURCES trên. Nế
     setExpandedSources(newExpanded);
   };
 
+  // Render message content with markdown bold (**text**) as blue bold
+  const renderMessageContent = (content: string) => {
+    // Improved regex to handle multiple ** patterns and edge cases
+    // Match **text** but allow for nested or incomplete patterns
+    const parts: Array<{ type: "bold" | "text"; content: string }> = [];
+    let currentIndex = 0;
+    const regex = /\*\*([^*]+?)\*\*/g;
+    let match;
+
+    while ((match = regex.exec(content)) !== null) {
+      // Add text before the match
+      if (match.index > currentIndex) {
+        parts.push({
+          type: "text",
+          content: content.substring(currentIndex, match.index),
+        });
+      }
+      // Add the bold text
+      parts.push({
+        type: "bold",
+        content: match[1], // The text inside **
+      });
+      currentIndex = match.index + match[0].length;
+    }
+
+    // Add remaining text
+    if (currentIndex < content.length) {
+      parts.push({
+        type: "text",
+        content: content.substring(currentIndex),
+      });
+    }
+
+    // If no matches found, return original content
+    if (parts.length === 0) {
+      return <span className="whitespace-pre-wrap">{content}</span>;
+    }
+
+    // Render parts
+    return (
+      <>
+        {parts.map((part, idx) => {
+          if (part.type === "bold") {
+            return (
+              <strong key={idx} className="text-blue-600 font-bold">
+                {part.content}
+              </strong>
+            );
+          }
+          return (
+            <span key={idx} className="whitespace-pre-wrap">
+              {part.content}
+            </span>
+          );
+        })}
+      </>
+    );
+  };
+
   if (indexStatus === "building" || indexStatus === "not_started") {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
@@ -309,7 +369,11 @@ Hãy trả lời câu hỏi của người dùng dựa trên SOURCES trên. Nế
                           : "bg-gray-100 text-gray-900"
                       }`}
                     >
-                      <p className="whitespace-pre-wrap">{message.content}</p>
+                      <div>
+                        {message.role === "assistant" 
+                          ? renderMessageContent(message.content)
+                          : <span className="whitespace-pre-wrap">{message.content}</span>}
+                      </div>
                       {message.timestamp && (
                         <p
                           className={`text-xs mt-1 ${

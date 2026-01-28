@@ -66,7 +66,7 @@ export default function StudyPage() {
       if (!currentRevealed.includes(label)) {
         const isWrong = !correctAnswers.includes(label);
         if (isWrong) {
-          const allRevealed = [...new Set([...currentRevealed, label, ...correctAnswers])];
+          const allRevealed = Array.from(new Set([...currentRevealed, label, ...correctAnswers]));
           setRevealedAnswers((prev) => ({ ...prev, [questionId]: allRevealed }));
         } else {
           setRevealedAnswers((prev) => ({ ...prev, [questionId]: [...currentRevealed, label] }));
