@@ -34,7 +34,7 @@ export default function StudyPage() {
   const questions = examQuestionsMap[examId] || [];
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string[]>>({});
-  const [showAnswers, setShowAnswers] = useState(true);
+  const [showAnswers, setShowAnswers] = useState(false);
   const [revealedAnswers, setRevealedAnswers] = useState<Record<string, string[]>>({});
 
   if (questions.length === 0) {
